@@ -1,7 +1,15 @@
-import { createStore } from 'redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension/developmentOnly';
-import reducer from './reducers'
+import { reducer as ProductListReducer } from './scenes/ProductsList/reducer';
+import thunk from 'redux-thunk';
+
+const appReducer = combineReducers({
+    productList: ProductListReducer,
+});
 
 export default createStore(
-    reducer, composeWithDevTools()
+    appReducer,
+    composeWithDevTools(
+        applyMiddleware(thunk),
+    )
 );
