@@ -10,15 +10,11 @@ export default class ProductsList extends Component {
         const products = this.props.products,
               productElements = [];
 
-        Object.keys(products).map(function(key, index) {
-            productElements.push(<Product key={products[index]._id} {...products[index]}></Product>);
-        });
+        Object.keys(products).map((key, index) => productElements.push(<Product key={products[index]._id} {...products[index]} />));
 
         return (
             <div>
-                <ul>
-                    {productElements}
-                </ul>
+                {productElements}
             </div>
         )
     }

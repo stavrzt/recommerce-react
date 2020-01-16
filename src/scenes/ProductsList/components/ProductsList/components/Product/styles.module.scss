@@ -1,0 +1,18 @@
+.product {
+    border: 1px solid darkgreen;
+    margin-bottom: 10px;
+    color: grey;
+    display: block;
+
+    &__image {
+        display: block;
+    }
+
+    &__name {
+        font-weight: bold;
+    }
+
+    &__price {
+        font-size: 14px;
+    }
+}
