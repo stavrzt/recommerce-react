@@ -1,0 +1,23 @@
+.navigation {
+    &__list {
+        display: flex;
+        padding: 0;
+    }
+
+    &__item {
+        list-style: none;
+        padding: 10px;
+
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+
+    &__link {
+        color: #84506d;
+    }
+}
