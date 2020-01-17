@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
-import Logo from './components/Logo';
+import { ReactComponent as Logo } from '../../assets/images/logo.svg';
 import Nav from "./components/Nav";
 import styles from  './styles.module.scss';
-
 
 export default class Header extends Component {
     render() {
